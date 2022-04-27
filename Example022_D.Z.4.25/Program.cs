@@ -1,17 +1,25 @@
 ﻿//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 int A;
 
-do
-{
-    Console.WriteLine("некорректный  ввод , попробуйте ущё раз  ");
-    Console.Write("введите число A: ");
-}
-while (!int.TryParse(Console.ReadLine(), out A)|| A<0);
+Console.Write("Введите введите число  А: ");
 
+while (!int.TryParse(Console.ReadLine(), out A) || A < 0)
+    Console.WriteLine("некорректный  ввод , попробуйте ущё раз : ");
 int B;
-do
+
+Console.Write("Введите введите число В: ");
+
+while (!int.TryParse(Console.ReadLine(), out B) || B <= 0)
+    Console.WriteLine("некорректный  ввод , попробуйте ущё раз : ");
+int count = 1;
+int result = A;
+
 {
-    Console.WriteLine("некорректный  ввод , попробуйте ущё раз  ");
-    Console.Write("введите число B: ");
+    while (count < B)
+
+    {
+        result = result* A;
+        count++;
+    }
 }
-while (!int.TryParse(Console.ReadLine(), out B)|| B<0);
+Console.WriteLine($" Число А в степени В = {result}");
