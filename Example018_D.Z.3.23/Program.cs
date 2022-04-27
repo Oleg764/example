@@ -6,9 +6,9 @@ if (N < 0)
 int i = 1;
 while (i <= N)
 {
-    int result = cub(i);
-
-    Console.Write(result + ";");
+int  result = cub(  i);
+    
+    Console.Write( result + ";");
     i++;
 }
 int cub(int N)
