@@ -6,13 +6,9 @@
 int number;
 
 Console.Write("Введите введите число: ");
-do
-{
-    Console.WriteLine("некорректный  ввод , попробуйте ущё раз  ");
-    Console.Write("введите число: ");
-}
 
-while (!int.TryParse(Console.ReadLine(), out number)|| number<0);
+while (!int.TryParse(Console.ReadLine(), out number)|| number<0)
+   Console.WriteLine("некорректный  ввод , попробуйте ущё раз : ");
 int sum = 0;
 
 while (number > 0)
