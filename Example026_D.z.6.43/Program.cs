@@ -10,11 +10,13 @@ Console.WriteLine("Введите k1 :");
 double k1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите k2 :");
 double k2 = Convert.ToInt32(Console.ReadLine());
+double X = (b2 - b1) / (k1 - k2);
+double Y = k1 * X + b1;
 
 if (k1 == k2)
-    Console.Write("Прямые параллельны или совпадают,");
- double X = (b2 - b1) / (k1 - k2);
- double Y = k1 * X + b1;
+    Console.Write("Прямые параллельны или совпадают !  ");
+else
+    Console.WriteLine($"Координаты точки пересечения  : X = {X} , Y = {Y}");
+Console.ReadKey();
 
 
-Console.WriteLine($"Координаты точки пересечения  : X = {X} , Y = {Y}");
